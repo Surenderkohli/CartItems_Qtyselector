@@ -71,18 +71,17 @@ const tshirtData = {
 
 export const stateData=createContext()
 function App() {
-  console.log(tshirtData);
+
 
   const [totalCount, setTotalCount] = useState(0)
 
-  console.log(totalCount,'app');
   
 
   
   
   return (<><stateData.Provider value={{totalCount, setTotalCount}}>
-    <div className="App">
-      <div className='w-1/2 border border-black mx-auto mt-4 p-5'>
+    <div className="App bg-[#7f7f7f] pt-4">
+      <div className='w-1/2  mx-auto  p-6 bg-white rounded-3xl shadow-[0_4px_12px_0px_rgba(207,133,52,1)]'>
       <Price/>
       <DetailsView tshirtData={tshirtData}/>
       </div>
